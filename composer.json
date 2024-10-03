@@ -1,6 +1,7 @@
 {
     "name": "ewersonfc/linhadigitavel",
     "license": "MIT",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Ewerson",

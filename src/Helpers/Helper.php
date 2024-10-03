@@ -46,7 +46,18 @@ class Helper
      */
     public static function extract($string)
     {
+        
         preg_match('[\d{5}\.\d{10}\.\d{11}\.\d{21}]', $string, $match);
+
+        /**
+         * If not match, try find Santander Format
+         * Example Santander Bill:
+         * 033992300.20600000001.15009880101.8790590000016897
+         */
+        if (!$match) {
+            preg_match('[\d{9}\.\d{11}\.\d{11}\.\d{16}]', $string, $match);
+        }
+
         return $match;
     }
 
